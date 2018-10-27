@@ -7,7 +7,7 @@ body{
 	margin-bottom: -2rem;
     background-color: #1a0621;
     font-family: Lato, Calibri, sans-serif;
-    color: #e7e5eb;;
+    color: #e7e5eb;
     font-size: 15px;
 }
 
@@ -19,7 +19,7 @@ nav {
     box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
     color: #888;
     display: block;
-    margin: 1vh 5%;
+    margin: 3vh 5%;
     overflow: hidden;
     width: 90%;
     font-weight: 300;
@@ -37,7 +37,7 @@ nav ul {
  
     nav ul li {
         display: inline-block;
-        padding: 5px 5px 5px 5px;
+        padding: 5px 20px;
 
 /*        -webkit-transition: all 0.2s;
         -moz-transition: all 0.2s;
@@ -46,21 +46,88 @@ nav ul {
         transition: all 0.2s;*/
     }
 
+nav ul li a {
+    text-decoration: none;
+    color: #1a0621;
+}
 
-
-    nav ul li a {
-        text-decoration: none;
-        color: #1a0621;
-    }
-
-    nav ul li {
+nav ul li {
 /*        color: #1a0621;*/
-    }
+}
 
-    nav > ul > li:hover {
-        background-color: rgba(26,6,33, 0.2);
-        color: #e7e5eb;
-	}
+nav > ul > li:hover {
+    background-color: rgba(26,6,33, 0.2);
+    color: #e7e5eb;
+}
+
+i {
+    font-size: 3rem;
+    padding: 5px;
+}
+
+i::before {
+    color: rgba(231, 229, 235, 0.9);
+}
+
+.icons {
+    padding: 15vh 35vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    align-content: center;
+}
+
+#gmail {
+/*    display: inline-block;*/
+    display: flex;
+    align-items: center;
+    color: color: rgba(231, 229, 235, 0.9);
+}
+
+a {
+    text-decoration: none;
+}
+
+/*------------------------------click to copy*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: rgba(231, 229, 235, 0.4);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 90%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.9rem;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+/*-----------------------------click to copy end*/
  
 section {
 	width: 100%;
