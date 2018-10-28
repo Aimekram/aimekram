@@ -60,13 +60,39 @@ nav > ul > li:hover {
     color: #e7e5eb;
 }
 
+section {
+	width: 100%;
+	height: 100vh;
+	float: left;
+}
+
+
+h1 {
+	font-size: 3rem;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h2 {
+	text-align: center;
+}
+
+h3 {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#home {
+    padding-top: 20vh;
+}
+
 i {
     font-size: 3rem;
     padding: 5px;
 }
 
 i::before {
-    color: rgba(231, 229, 235, 0.9);
+    color: rgba(231, 229, 235, 0.8);
 }
 
 .icons {
@@ -81,7 +107,11 @@ i::before {
 /*    display: inline-block;*/
     display: flex;
     align-items: center;
-    color: color: rgba(231, 229, 235, 0.9);
+    color: rgba(231, 229, 235, 0.8);
+}
+
+#gmail:hover {
+    cursor: pointer;
 }
 
 a {
@@ -128,40 +158,8 @@ a {
     opacity: 1;
 }
 /*-----------------------------click to copy end*/
- 
-section {
-	width: 100%;
-	height: 100vh;
-	float: left;
-	padding-top: 50px;
-}
 
 
-h1 {
-	font-size: 3rem;
-    text-align: center;
-}
-
-h2 {
-	text-align: center;
-}
-
-h3 {
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-footer {
-	/*background-color: #efefef;*/
-	text-align: center;
-	padding-top: 0.5rem;
-	height: 2rem;
-	font-size: 10px;
-}
-
-#home {
-    padding-top: 30vh;
-}
 
 .btn {
 	background-color: purple;
@@ -188,26 +186,118 @@ footer {
     line-height: 1.5rem;
 }
 
-
 img {
     max-width: 70vw;
     outline: 3px solid black;
     outline-offset: -2px;
 }
 
+#projects {
+    margin-bottom: -40px;
+}
+
 .projectImg {
     text-align: center;
 }
 
-div.push {
-  height: 3rem;
+/*-----------------------------carousel*/
+.carousel-wrapper{
+  height:400px;
+  position:relative;
+  width:800px;
+  margin:0 auto;
+}
+.carousel-item{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.arrow{
+    border: solid #e7e5eb;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
 }
 
-#FormInput1 {
-	width: 18rem;
+.arrow-prev{
+  left:-30px;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%) rotate(135deg);
+}
+ 
+.arrow-next{
+    right:-30px;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%) rotate(-45deg);
+  }
+
+.light{
+  color: white;
 }
 
-#FormInput2 {
-	max-width: 50rem;
-	height: auto;
+@media (max-width: 480px) {
+      .arrow, .light .arrow {
+        background-size: 10px;
+        background-position: 30px 50%;
+      }
+    }
 }
+
+/*Select every element*/
+[id^="item"] {
+    display: none;
+  }
+
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+  background:url('pictures/7wonders.PNG');
+  background-size:cover;
+  }
+.item-2{
+  background:url('pictures/RGBguessing.PNG');
+   background-size:cover;
+}
+.item-3{
+  background:url('pictures/paddlesGame.PNG');
+   background-size:cover;
+}
+
+*:target ~ .item-1 {
+    opacity: 0;
+  }
+
+#item-1:target ~ .item-1 {
+    opacity: 1;
+  }
+
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+  }
+}
+
+.carousel-item item-1 {
+
+    padding-top: 800px;
+}
+/*-----------------------------footer*/
+/*
+footer {
+    padding: 0.5em;
+	background-color: #efefef;
+	text-align: center;
+	height: 20px;
+	font-size: 10px;
+}
+
+.push {
+  height: 20px;
+}*/
