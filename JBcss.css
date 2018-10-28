@@ -126,7 +126,7 @@ a {
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 150px;
+    width: 120px;
     background-color: rgba(231, 229, 235, 0.4);
     color: #fff;
     text-align: center;
@@ -140,6 +140,7 @@ a {
     opacity: 0;
     transition: opacity 0.3s;
     font-size: 0.9rem;
+    transition: all 2s ease;
 }
 
 .tooltip .tooltiptext::after {
