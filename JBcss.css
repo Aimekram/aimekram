@@ -39,7 +39,7 @@ nav ul {
         display: inline-block;
         padding: 5px 20px;
 
-/*        -webkit-transition: all 0.2s;
+/*      -webkit-transition: all 0.2s;
         -moz-transition: all 0.2s;
         -ms-transition: all 0.2s;
         -o-transition: all 0.2s;
@@ -73,13 +73,10 @@ h1 {
     padding-top: 50px;
 }
 
-h2 {
+.info {
 	text-align: center;
-}
-
-h3 {
-    margin-bottom: 15px;
-    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1.5;
 }
 
 #home {
@@ -108,6 +105,7 @@ i::before {
     display: flex;
     align-items: center;
     color: rgba(231, 229, 235, 0.8);
+    font-style: normal;
 }
 
 #gmail:hover {
@@ -140,7 +138,7 @@ a {
     opacity: 0;
     transition: opacity 0.3s;
     font-size: 0.9rem;
-    transition: all 2s ease;
+    transition: all 1.5s ease;
 }
 
 .tooltip .tooltiptext::after {
@@ -159,8 +157,6 @@ a {
     opacity: 1;
 }
 /*-----------------------------click to copy end*/
-
-
 
 .btn {
 	background-color: purple;
@@ -190,7 +186,7 @@ a {
 img {
     max-width: 70vw;
     outline: 3px solid black;
-    outline-offset: -2px;
+    outline-offset: -4px;
 }
 
 #projects {
@@ -203,20 +199,21 @@ img {
 
 /*-----------------------------carousel*/
 .carousel-wrapper{
-  height:400px;
-  position:relative;
-  width:800px;
-  margin:0 auto;
+    height:600px;
+    position:relative;
+    width:800px;
+    margin:0 auto;
 }
 .carousel-item{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 25px 50px;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 425px 50px 0 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+/*    border: 3px solid red;*/
 }
 .arrow{
     border: solid #e7e5eb;
@@ -226,18 +223,18 @@ img {
 }
 
 .arrow-prev{
-  left:-30px;
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%) rotate(135deg);
+    left: -60px;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%) rotate(135deg);
 }
  
 .arrow-next{
-    right:-30px;
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%) rotate(-45deg);
-  }
+    right: -60px;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%) rotate(-45deg);
+}
 
 .light{
   color: white;
@@ -259,16 +256,19 @@ img {
 .item-1 {
     z-index: 2;
     opacity: 1;
-  background:url('pictures/7wonders.PNG');
-  background-size:cover;
+    background: url('pictures/7wonders.PNG');
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 .item-2{
-  background:url('pictures/RGBguessing.PNG');
-   background-size:cover;
+    background:url('pictures/RGBguessing.PNG');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .item-3{
-  background:url('pictures/paddlesGame.PNG');
-   background-size:cover;
+    background:url('pictures/paddlesGame.PNG');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 *:target ~ .item-1 {
@@ -285,10 +285,7 @@ img {
   }
 }
 
-.carousel-item item-1 {
 
-    padding-top: 800px;
-}
 /*-----------------------------footer*/
 /*
 footer {
