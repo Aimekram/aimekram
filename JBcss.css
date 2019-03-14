@@ -1,86 +1,122 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
 /*------BACKGROUND STYLE---------*/
 
 body{
     margin: 0;
     padding: 0;
-	min-height: 100%;
-	margin-bottom: -2rem;
+/*	margin-bottom: -2rem;*/
     background-color: #1a0621;
     font-family: Lato, Calibri, sans-serif;
     color: #e7e5eb;
-    font-size: 15px;
+    font-size: 16px;
+    width: 100%;
 }
 
-/*---------NAVBAR STYLE---------*/
-nav {
+
+/*-----------------------------NAVBAR ----------*/
+.navbar {
     background-color: #e7e5eb;
     border: 1px solid #dedede;
     border-radius: 4px;
-    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
     color: #888;
-    display: block;
-    margin: 3vh 5%;
     overflow: hidden;
-    width: 90%;
+    width: 100%;
+    height: 2.5em;
     font-weight: 300;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     position: fixed;
-    z-index: 1;
+    top: 0;
+/*    margin: 0 5%;*/
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
 
 
-nav ul {
-    width: fit-content;
+.navbar_list {
     margin: auto;
     list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
 }
  
-    nav ul li {
-        display: inline-block;
-        padding: 5px 20px;
-
-/*      -webkit-transition: all 0.2s;
-        -moz-transition: all 0.2s;
-        -ms-transition: all 0.2s;
-        -o-transition: all 0.2s;
-        transition: all 0.2s;*/
-    }
-
-nav ul li a {
-    text-decoration: none;
+.navbar_listitem {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 2.5em;
     color: #1a0621;
 }
 
-nav ul li {
-/*        color: #1a0621;*/
+.navbar_listitem:hover {
+    background-color: rgba(26,6,33, 0.2);
 }
 
-nav > ul > li:hover {
-    background-color: rgba(26,6,33, 0.2);
-    color: #e7e5eb;
-}
+/*--------- ---------*/
 
 section {
-	width: 100%;
-	height: 100vh;
-	float: left;
+	max-width: 100%;
+	min-height: 100vh;
+	display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
 }
 
+
+.home {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
 
 h1 {
 	font-size: 3rem;
-    text-align: center;
-    padding-top: 50px;
 }
 
 .info {
-	text-align: center;
     font-size: 2rem;
     line-height: 1.5;
-}
-
-#home {
-    padding-top: 20vh;
 }
 
 i {
@@ -93,7 +129,7 @@ i::before {
 }
 
 .icons {
-    padding: 15vh 35vw;
+    margin-top: 150px;
     display: flex;
     align-items: center;
     justify-content: space-evenly; 
@@ -156,32 +192,39 @@ a {
     visibility: visible;
     opacity: 1;
 }
-/*-----------------------------click to copy end*/
 
-.btn {
-	background-color: purple;
-	border-color: blue;
-}
 
-.flexContainer {
+/*-----------------------------ABOUT*/
+
+
+.about_grid {
+    max-width: 100%;
     display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap;
+    flex-flow: row wrap; 
     justify-content: space-evenly; 
-    align-content: center;
-    padding: 0 8vw;
+    align-content: space-evenly;
+/*    padding: 0 8vw;*/
 }
 
-.textDisplay {
-    border: solid #e7e5eb 2px;
-    max-width: 35vw;
-    min-width: 150px;
+.about_grid_element {
+/*    border-top: solid #e7e5eb 2px;*/
+    border-bottom: solid #e7e5eb 2px;
+    max-width: 400px;
+    min-width: 300px;
     text-align: center;
     padding: 2rem;
-    align-self: space-around;
-    margin: 3vh auto;
+    margin: 20px;
     line-height: 1.5rem;
 }
+
+.about_subheader {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: 10px; 
+}
+
+
+/*-----------------------------PROJECTS*/
 
 img {
     max-width: 70vw;
@@ -299,3 +342,18 @@ footer {
 .push {
   height: 20px;
 }*/
+
+
+/*--------------------------------MEDIA QUERIES*/
+
+@media (min-width: 600px) {
+    
+}
+
+@media (min-width: 900px) {
+    
+}
+
+@media (min-width: 1400px) {
+    
+}
