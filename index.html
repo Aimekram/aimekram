@@ -1,135 +1,58 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devtortie</title>
+    <meta
+      name="description"
+      content="Devtortie - frontend engineer specializing in TypeScript and React"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/public/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/public/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/public/favicon/site.webmanifest" />
+    <meta name="keywords" content="frontend, TypeScript, React" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-  <title>Portfolio</title>
-  
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="JBcss.css">
-
-    <script type="text/javascript" src="JBjs.js"></script>
-  
-
-</head>
-
-<body>
-    <header>
-        <nav class="navbar">
-            <ul class="navbar_list">
-              <li><a class="navbar_listitem" href="#home">JaniBy</a></li>
-              <li><a class="navbar_listitem" href="#about">O MNIE</a></li>
-              <li><a class="navbar_listitem" href="#projects">PROJEKTY</a></li>
-<!--                  <li><a href="#contact"> KONTAKT</a></li>-->
-            </ul>
-        </nav>
-    </header>
-
+  <body>
     <main>
-        <section class="home" id="home">
+      <section class="home">
+        <h1>devtortie</h1>
 
-            <!-- <p>Language switch button: PL/ENG</p> -->
-            <h1>Janina Byszewska</h1>
-            <div class="info">Front-end Developer</div>
-            <div class="info">Graphic Designer</div>
-            <div class="info">Snowboarder and Metalhead</div>
-
-            <address class="icons">
-                <a href="https://github.com/Aimekram" target="_blank">
-                    <i class="fab fa-github-square"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/janina-byszewska-34004b16b" target="_blank" >
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <div id="gmail" class="tooltip" onclick="myFunction()" onmouseout="setTimeout(outFunc, 4000)">
-                    <i class="fas fa-envelope-square"></i><span>janina.byszewska@gmail.com</span>
-                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span></div>
-            </address>
-
-        </section>
-
-      <section id="about">
-
-          <h1>O MNIE</h1>
-
-       <div class="about_grid">
-           <div class="about_grid_element">
-            <h3 class="about_subheader">STUDIA</h3>
-            <p>Lubię moje studia. Jestem już na finiszu magisterki - Politechnika Warszawska, kierunek Papiernictwo i Poligrafia. Jest ciekawie, wiem jak działa drukarka, do czego wykorzystuje się bezizocyjanianowe polihydroksyuretany i umiem otworzyć butelkę piwa kartką A4. Jest na tyle nowocześnie, że w ramach pracy mgr piszę aplikację w JS.</p>
+        <address class="icons">
+          <a href="https://github.com/Aimekram" target="_blank">
+            <i class="fab fa-github-square"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/janina-byszewska-34004b16b"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <div
+            id="gmail"
+            class="tooltip"
+            onclick="myFunction()"
+            onmouseout="setTimeout(outFunc, 4000)"
+          >
+            <i class="fas fa-envelope-square"></i
+            ><span>janina.byszewska@gmail.com</span>
+            <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
           </div>
-
-          <div class="about_grid_element">
-            <h3 class="about_subheader">FRONT-END</h3>
-            <p>Studia to nie wszystko! Jakiś czas temu zaczęłam się interesować front-endem. Spodobało mi się to, że można stworzyć naprawdę wszystko. Chciałabym znaleźć sposób, by kiedyś mój kod miał znaczenie. Może jednak internet jest w stanie zrobić coś dobrego dla ludzkości?</p>
-          </div>
-
-          <div class="about_grid_element">
-            <h3 class="about_subheader">GRAFIKA</h3>
-            <p>Przede wszystkim użytkowa. Nie jestem niestety artystką, ale cieszy mnie tworzenie poprawnych i czasem nawet ładnych projektów. Wszystko przez to, że na studiach mieliśmy podstawy obsługi AI oraz PS. Teraz znajomi całkiem często potrzebują jakiś plakat, projekt etykiety czy koszyk dla Pani Jesień...</p>
-          </div>
-
-          <div class="about_grid_element">
-            <h3 class="about_subheader">Filmiki</h3>
-            <p>Kto nie lubi wspomnień? Robimy miliony zdjęć telefonami, których nikt nigdy nie obejrzy. Jak pokazać znajomym klimat wyjazdu, jeśli napstrykane jest 600 zdjęć z czego co trzecie to "artystyczne" ujęcie różowego kapcia? Dlatego zaczęłam kleić filmiki z wyjazdów ze znajomymi. Nagranie trwa kilka minut i jest w stanie dużo lepiej pokazać ludziom jak spędziliśmy czas. A do tego przy nagrywaniu jest sporo zabawy!</p>
-          </div>
-        </div>   
-
-
-
+        </address>
       </section>
-
-
-      <section id="projects">
-
-        <h1>PROJEKTY</h1>
-<!--
-        <div class="carousel-wrapper">
-            <span id="item-1"></span>
-            <span id="item-2"></span>
-            <span id="item-3"></span>
-            <div class="carousel-item item-1">
-                                <h2>Projekt "7 Wonders"</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus   accumsan pretium dolor vel convallis. Aliquam erat volutpat. Maecenas lacus nunc, imperdiet sed mi et, finibus suscipit mi.</p>
-            <a class="arrow arrow-prev" href="#item-3"></a>
-            <a class="arrow arrow-next" href="#item-2"></a>
-
-            </div>
-
-      <div class="carousel-item item-2">
-        <h2>Projekt "Color Guessing Game"</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan pretium dolor vel convallis. Aliquam erat volutpat.</p>
-        <a class="arrow arrow-prev" href="#item-1"></a>
-        <a class="arrow arrow-next" href="#item-3"></a>
-      </div>
-
-      <div class="carousel-item item-3">
-        <h2>Projekt "Paddles Game"</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan pretium dolor vel convallis. Aliquam erat volutpat.</p>
-        <a class="arrow arrow-prev" href="#item-2"></a>
-        <a class="arrow arrow-next" href="#item-1"></a>
-
-
-            </div>
-        </div>
--->
-
-    <!--
-        <div class="projectImg">
-            <img src="pictures/7wonders.PNG">
-          </div>
-    -->
-
-          <div class="push"></div>
-      </section>  
     </main>
-    
-  
-<!--  <footer class="footer">&#169; Janina Byszewska</footer>-->
-    
-</body>
+  </body>
 </html>
